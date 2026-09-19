@@ -22,20 +22,20 @@ npm run dev
 
 ## 🤖 AIエージェントを使ったLP自動生成の3ステップ
 
-### ステップ 1: 概要を投入する（構成データの生成）
+### ステップ 1: 概要を投入する（デザイン計画 & 構成データの生成）
 AIチャット（Antigravity等）で以下のように伝えます：
 > 「`.agent/workflows/01-generate-spec.md` を実行して。サービス概要は以下の通りです：
 > [サービス名、ターゲット、主要機能、強みなどを入力]」
 
-➔ `src/constants/page-structure.json` に最適なセクション構成データが自動生成・上書き保存されます。
+➔ `lp-frontend-design` スキルに基づいてサービスの文脈に即したデザイン方針（配色・タイポグラフィ・Hero主役要素）が策定され、AI Slopを排除した構成データが `src/constants/page-structure.json` に自動生成されます。
 
-### ステップ 2: 自動ビルドを実行する
+### ステップ 2: 自動ビルド・スタイリングを実行する
 > 「`.agent/workflows/02-build-lp.md` を実行して」
 
-➔ React + Tailwind CSS の動的レンダラーによって画面が瞬時に構築されます。
+➔ React + Tailwind CSS の動的レンダラーによって画面が瞬時に構築され、デザイン品質チェックが行われます。
 
 ### ステップ 3: 画像の手配・生成
-`page-structure.json` に出力された `ai_prompt` をそのまま画像生成AI（Midjourney、DALL-E、Imagen等）に投げるか、指定されたパス（例: `/public/images/hero/hero_dashboard.png`）に画像を配置します。
+`page-structure.json` に出力された `prompt`（または `ai_prompt`）をそのまま画像生成AI（Midjourney、DALL-E、Imagen等）に投げるか、指定されたパス（例: `/public/images/hero/hero-visual.png`）に画像を配置します。
 画像が未配置の場合でも、美しいフォールバックカードが表示されるためレイアウトが崩れません。
 
 ---
@@ -46,9 +46,12 @@ AIチャット（Antigravity等）で以下のように伝えます：
 lp-builder-agent/
 ├── .agent/
 │   ├── rules.md                   # AIエージェントの基本ルール（デザイン・実装方針）
+│   ├── skills/
+│   │   └── lp-frontend-design/    # LP特化型フロントエンドデザインスキル
+│   │       └── SKILL.md
 │   ├── workflows/
-│   │   ├── 01-generate-spec.md    # 概要から構成データ(JSON)を作るフロー
-│   │   └── 02-build-lp.md         # JSONからコードを作るフロー
+│   │   ├── 01-generate-spec.md    # デザイン方針策定＆構成データ(JSON)生成フロー
+│   │   └── 02-build-lp.md         # JSONからコード構築・品質検証フロー
 │   └── templates/
 │       └── structure.json         # 構成データの出力フォーマット（スキーマ）
 ├── public/
