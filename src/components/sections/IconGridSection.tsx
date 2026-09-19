@@ -10,9 +10,14 @@ import {
   Smartphone, 
   CheckCircle, 
   Star,
+  Type,
+  Image as ImageIcon,
+  Share2,
+  Bookmark,
   LucideIcon
 } from 'lucide-react';
 import { ImageAsset } from '../common/ImageWithFallback';
+import { SectionHeader } from '../common/SectionHeader';
 
 const iconMap: Record<string, LucideIcon> = {
   Zap,
@@ -25,27 +30,35 @@ const iconMap: Record<string, LucideIcon> = {
   Smartphone,
   CheckCircle,
   Star,
+  Type,
+  ImageIcon,
+  Share2,
+  Bookmark,
 };
 
 export interface IconGridItem {
   icon?: string;
+  badge?: string;
   title: string;
   description: string;
+  note?: string; // 例: 「※要会員登録」「※一部有料」
 }
 
 export interface IconGridSectionProps {
   badge?: string;
   title?: string;
+  highlight_word?: string;
   description?: string;
-  columns?: number;
+  columns?: number; // 2, 3, 4
   items?: IconGridItem[];
   assets?: ImageAsset[];
 }
 
 export const IconGridSection: React.FC<IconGridSectionProps> = ({
-  badge = 'メリット',
-  title = '選ばれ続ける3つの理由',
-  description = 'あらゆる規模のチームやプロジェクトで価値を発揮します。',
+  badge = 'その他の機能',
+  title = '日々のラベル作りを快適にする多彩な機能',
+  highlight_word,
+  description = 'ちょっとした工夫と充実の機能で、毎日の暮らしがもっとスムーズに。',
   columns = 3,
   items = [],
 }) => {
@@ -61,23 +74,17 @@ export const IconGridSection: React.FC<IconGridSectionProps> = ({
   return (
     <section className="py-16 md:py-24 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          {badge && (
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E6A817] bg-[#E6A817]/10 px-3 py-1 rounded-full mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              {badge}
-            </span>
-          )}
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2B2B2B] tracking-tight mb-4">
-            {title}
-          </h2>
-          <p className="text-base sm:text-lg text-[#2B2B2B]/70">
-            {description}
-          </p>
-        </div>
+        {/* Section Header */}
+        <SectionHeader
+          badge={badge}
+          title={title}
+          highlight_word={highlight_word}
+          description={description}
+          centered={true}
+          className="mb-14"
+        />
 
-        {/* Grid */}
+        {/* Grid (2x2, 3x3, etc.) */}
         <div className={`grid ${gridColsClass} gap-6 sm:gap-8`}>
           {items.map((item, idx) => {
             const IconComponent = (item.icon && iconMap[item.icon]) ? iconMap[item.icon] : Sparkles;
@@ -85,19 +92,34 @@ export const IconGridSection: React.FC<IconGridSectionProps> = ({
             return (
               <div
                 key={idx}
-                className="group relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border border-black/5 shadow-soft hover:shadow-float hover:-translate-y-1 transition-all duration-300 flex flex-col items-start"
+                className="group relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border border-black/5 shadow-soft hover:shadow-float hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
-                <div className="w-12 h-12 rounded-2xl bg-amber-50 text-[#E6A817] border border-amber-100 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#E6A817] group-hover:text-white transition-all duration-300 shadow-sm">
-                  <IconComponent className="w-6 h-6" />
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-amber-50 text-[#E6A817] border border-amber-100 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#E6A817] group-hover:text-white transition-all duration-300 shadow-sm">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                    {item.badge && (
+                      <span className="text-[11px] font-bold text-[#B8820B] bg-[#E6A817]/10 px-2.5 py-0.5 rounded-full">
+                        {item.badge}
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="text-xl font-bold text-[#2B2B2B] tracking-tight mb-3">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-sm text-[#2B2B2B]/75 leading-relaxed mb-4">
+                    {item.description}
+                  </p>
                 </div>
 
-                <h3 className="text-xl font-bold text-[#2B2B2B] tracking-tight mb-3">
-                  {item.title}
-                </h3>
-                
-                <p className="text-sm text-[#2B2B2B]/75 leading-relaxed">
-                  {item.description}
-                </p>
+                {item.note && (
+                  <p className="text-xs text-gray-500 pt-3 border-t border-black/5">
+                    {item.note}
+                  </p>
+                )}
               </div>
             );
           })}

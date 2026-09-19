@@ -1,12 +1,17 @@
 import React from 'react';
 import { ArrowRight, ChevronRight, Sparkles } from 'lucide-react';
 import { ImageWithFallback, ImageAsset } from '../common/ImageWithFallback';
+import { AppStoreButtons } from '../common/AppStoreButtons';
 
 export interface HeroSectionProps {
   badge?: string;
   title?: string;
   highlight_word?: string;
+  subtitle?: string;
   description?: string;
+  app_store_url?: string;
+  google_play_url?: string;
+  note?: string;
   primary_cta?: { label: string; href?: string };
   secondary_cta?: { label: string; href?: string };
   stats?: Array<{ value: string; label: string }>;
@@ -15,18 +20,23 @@ export interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   badge,
-  title = '驚くほど簡単に、高品質な体験を。',
+  title = '日々の暮らしを、もっと自分らしく彩る。',
   highlight_word,
-  description = 'あらゆるプロセスを自動化し、あなたのビジネスを次のステージへと導きます。',
-  primary_cta = { label: '無料で試す', href: '#cta' },
-  secondary_cta = { label: '詳しく見る', href: '#features' },
+  subtitle,
+  description = '直感的な操作と豊富なテンプレートで、あなただけの特別なラベルをすぐに作成できます。',
+  app_store_url,
+  google_play_url,
+  note,
+  primary_cta,
+  secondary_cta,
   stats = [],
   assets = [],
 }) => {
   const heroAsset = assets.find((a) => a.id === 'hero_visual') || assets[0];
+  const hasAppStore = Boolean(app_store_url || google_play_url);
 
   return (
-    <section className="relative overflow-hidden pt-20 pb-16 md:pt-28 md:pb-24">
+    <section className="relative overflow-hidden pt-16 pb-16 md:pt-24 md:pb-24">
       {/* Background ambient accents */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-[#E6A817]/15 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
       
@@ -41,7 +51,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           )}
 
-          {/* Title */}
+          {/* Subtitle if specified */}
+          {subtitle && (
+            <p className="text-sm sm:text-base font-bold text-[#E6A817] uppercase tracking-widest mb-3">
+              {subtitle}
+            </p>
+          )}
+
+          {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#2B2B2B] tracking-tight leading-[1.15] mb-6">
             {highlight_word && title.includes(highlight_word) ? (
               <>
@@ -58,30 +75,43 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </h1>
 
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-[#2B2B2B]/75 leading-relaxed max-w-2xl mx-auto mb-8 font-normal">
-            {description}
-          </p>
+          {description && (
+            <p className="text-base sm:text-lg md:text-xl text-[#2B2B2B]/75 leading-relaxed max-w-2xl mx-auto mb-8 font-normal">
+              {description}
+            </p>
+          )}
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            {primary_cta && (
-              <a
-                href={primary_cta.href || '#cta'}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#2B2B2B] text-white font-semibold text-sm shadow-md hover:bg-black hover:shadow-float transition-all duration-200 transform hover:-translate-y-0.5"
-              >
-                {primary_cta.label}
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            )}
-            {secondary_cta && (
-              <a
-                href={secondary_cta.href || '#features'}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#2B2B2B] font-semibold text-sm border border-black/10 shadow-soft hover:bg-gray-50 transition-all duration-200"
-              >
-                {secondary_cta.label}
-              </a>
-            )}
-          </div>
+          {/* App Store Buttons or Standard CTA Buttons */}
+          {hasAppStore ? (
+            <AppStoreButtons
+              app_store_url={app_store_url}
+              google_play_url={google_play_url}
+              note={note}
+              align="center"
+              theme="dark"
+              className="mb-8"
+            />
+          ) : (
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-8">
+              {primary_cta && (
+                <a
+                  href={primary_cta.href || '#cta'}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#2B2B2B] text-white font-semibold text-sm shadow-md hover:bg-black hover:shadow-float transition-all duration-200 transform hover:-translate-y-0.5"
+                >
+                  {primary_cta.label}
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              )}
+              {secondary_cta && (
+                <a
+                  href={secondary_cta.href || '#features'}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#2B2B2B] font-semibold text-sm border border-black/10 shadow-soft hover:bg-gray-50 transition-all duration-200"
+                >
+                  {secondary_cta.label}
+                </a>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Hero Visual Area */}

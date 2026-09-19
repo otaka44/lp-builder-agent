@@ -1,11 +1,11 @@
 {
   "site_metadata": {
-    "title": "LP Builder Agent｜数分で高品質なLPを自動生成",
-    "description": "サービス概要を入力するだけで、AIが最適な構成設計・コピーライティング・アセット定義を行って高クオリティなLPを瞬時に構築する次世代開発エージェント。",
+    "title": "「テプラ」PRO MARK 専用アプリ「Hello」",
+    "description": "日々の暮らしになじむ、あなただけの特別なラベルづくり。直感的な操作と豊富なテンプレートで、ラベル作成がもっと楽しく。",
     "theme": {
-      "primary_color": "#2B2B2B",
+      "primary_color": "#E6A817",
       "background_color": "#F4F5F0",
-      "accent_color": "#E6A817"
+      "text_color": "#2B2B2B"
     }
   },
   "sections": [
@@ -13,213 +13,335 @@
       "id": "hero",
       "type": "Hero",
       "props": {
-        "badge": "AI-Powered Landing Page Generator v1.0",
-        "title": "アイデアを最速で具現化する、次世代のLP生成エージェント",
-        "highlight_word": "次世代のLP生成エージェント",
-        "description": "サービス概要をプロンプトに入力するだけ。AIが最適なコンポーネント選定・デザインデータ注入・アセット定義を行い、数分で高品質なランディングページを構築します。",
-        "primary_cta": {
-          "label": "今すぐ使ってみる",
-          "href": "#cta"
-        },
-        "secondary_cta": {
-          "label": "機能デモを見る",
-          "href": "#features"
-        },
+        "badge": "iOS / Android 対応アプリ",
+        "subtitle": "「テプラ」PRO MARK 専用アプリ",
+        "title": "日々の暮らしを、もっと自分らしく彩る。",
+        "highlight_word": "自分らしく彩る",
+        "description": "直感的なスマホ操作と豊富なテンプレートで、整理整頓からギフトまで、あらゆるシーンに寄り添うラベル作成体験をお届けします。",
+        "app_store_url": "https://apps.apple.com",
+        "google_play_url": "https://play.google.com",
+        "note": "※iOS 14.0以降 / Android 9.0以降対応。※通信料はお客様のご負担となります。",
         "stats": [
-          { "value": "10x", "label": "制作スピードの向上" },
-          { "value": "100%", "label": "TypeScript & Tailwind準拠" },
-          { "value": "7+", "label": "厳選UIコンポーネント" }
+          { "value": "100+", "label": "厳選テンプレート" },
+          { "value": "4.8★", "label": "ユーザー評価" },
+          { "value": "1分〜", "label": "簡単クイック作成" }
         ]
       },
       "required_assets": [
         {
           "id": "hero_visual",
-          "path": "/images/hero/hero_dashboard.png",
+          "file_name": "hero-mark-app.png",
           "aspect_ratio": "16:9",
-          "description": "美しく洗練されたAI開発ダッシュボード画面の3D UIモックアップ",
-          "ai_prompt": "Clean modern SaaS web application dashboard mock-up on a soft neutral light background, minimalist clay style, vibrant amber accents, high quality UI/UX illustration --ar 16:9"
+          "prompt": "Modern smartphone displaying elegant label printing app next to a minimal label printer and beautifully organized kitchen spice jars, warm aesthetic lighting, neutral background, photorealistic, 8k"
         }
       ]
     },
     {
-      "id": "features_tab",
+      "id": "creation-methods",
       "type": "TabbedFeature",
       "props": {
-        "badge": "機能紹介",
-        "title": "構成データとUIが完全に連動するスマート設計",
-        "description": "スキーマ駆動開発により、エンジニアリングとデザインの境界をシームレスにつなぎます。",
+        "badge": "3つの作成方法",
+        "title": "使い方に合わせて選べる 3つの作成スタイル",
+        "highlight_word": "選べる 3つの作成スタイル",
+        "description": "急いでいるときも、こだわりたいときも。あなたのシーンに最適なアプローチでスムーズに作成できます。",
         "tabs": [
           {
-            "id": "tab1",
-            "label": "構成データ自動生成",
-            "title": "概要テキストから即座にJSONスペックを作成",
-            "description": "ワークフロー 01 を実行するだけで、ターゲット顧客や訴求軸を分析し、最適なセクション構成を自動設計します。",
+            "id": "quick",
+            "tab_number": "01",
+            "label": "クイック作成",
+            "catchphrase": "最短ステップで即印刷",
+            "title": "テンプレートを選んで文字を変えるだけ",
+            "description": "あらかじめ用意されたデザインテンプレートからお気に入りを選び、テキストを書き換えるだけであっという間に完成します。",
             "points": [
-              "自然言語による直感的な要件定義",
-              "ペルソナに応じた最適なコンポーネント選定",
-              "画像生成用英語プロンプトの自動出力"
+              "豊富なカテゴリ（キッチン・クローゼット・オフィスなど）",
+              "文字を入力するだけの直感プレビュー",
+              "タップ1つで即座に印刷開始"
             ],
-            "asset_id": "tab_img_1"
+            "asset_id": "tab_quick_img"
           },
           {
-            "id": "tab2",
-            "label": "動的レンダリング",
-            "title": "JSONデータから一瞬でReactコンポーネントを描画",
-            "description": "洗練された7つの基本コンポーネントが、設定されたデータに基づいて破綻なく美しくスタイリングされます。",
+            "id": "batch",
+            "tab_number": "02",
+            "label": "一括作成",
+            "catchphrase": "複数ラベルをまとめて作成",
+            "title": "同じデザインで文字違いのラベルを一度に印刷",
+            "description": "調味料セットや書類ボックスなど、統一されたフォーマットで複数枚のラベルを一気に印刷したいときに最適です。",
             "points": [
-              "Tailwind CSSによる統一感のあるモダンデザイン",
-              "画像が未配置でも美しいプレースホルダー表示",
-              "完全レスポンシブ（PC・タブレット・スマホ対応）"
+              "リスト入力で複数ラベルを一括編集",
+              "ラベルデザインの統一感をキープ",
+              "連続印刷で作業時間を大幅短縮"
             ],
-            "asset_id": "tab_img_2"
+            "asset_id": "tab_batch_img"
+          },
+          {
+            "id": "custom",
+            "tab_number": "03",
+            "label": "こだわり作成",
+            "catchphrase": "フォントや配置も自由自在",
+            "title": "フォントやアイコンを自由にカスタマイズ",
+            "description": "フォントの変更、行間・文字サイズの微調整、オリジナルアイコンの配置など、細部まで徹底的にこだわったデザインが可能です。",
+            "points": [
+              "多彩な日本語・欧文フォントを収録",
+              "オリジナルの絵文字・フレームが充実",
+              "プレビューを見ながらmm単位で調整可能"
+            ],
+            "asset_id": "tab_custom_img"
           }
         ]
       },
       "required_assets": [
         {
-          "id": "tab_img_1",
-          "path": "/images/tabbed_feature/ai_generate.png",
+          "id": "tab_quick_img",
+          "file_name": "quick-create-demo.png",
           "aspect_ratio": "4:3",
-          "description": "AIが自然言語からJSON構造データを生成するフローの可視化グラフィック",
-          "ai_prompt": "Futuristic AI workflow generator interface with smooth animations, glowing elements, soft earth tones --ar 4:3"
+          "prompt": "Close-up of a clean smartphone screen showing quick label template selection with Japanese typography and minimalist UI"
         },
         {
-          "id": "tab_img_2",
-          "path": "/images/tabbed_feature/customize.png",
+          "id": "tab_batch_img",
+          "file_name": "batch-create-demo.png",
           "aspect_ratio": "4:3",
-          "description": "モダンなReactコンポーネントが自動配置されるUIプレビュー画面",
-          "ai_prompt": "Modern drag and drop visual editor web interface, minimalist components, sleek design --ar 4:3"
+          "prompt": "Flatlay of multiple printed minimalist aesthetic labels on glass jars and spice containers arranged cleanly"
+        },
+        {
+          "id": "tab_custom_img",
+          "file_name": "custom-create-demo.png",
+          "aspect_ratio": "4:3",
+          "prompt": "UI screen demonstrating custom typography tools, font selections, and micro-adjustments for label design"
         }
       ]
     },
     {
-      "id": "feature_highlight",
+      "id": "feature-highlight",
       "type": "FeatureHighlight",
       "props": {
-        "badge": "圧倒的な生産性",
-        "title": "ゼロから作らない。だから最高速で最高品質。",
-        "description": "従来のLP制作にかかっていた時間とコストを90%以上削減し、ビジネスの検証速度を飛躍的に高めます。",
+        "badge": "注目機能",
+        "title": "忘れがちな予定や期限をスマートに管理「タイムラベル」",
+        "highlight_word": "タイムラベル",
+        "description": "ラベルにアラームやリマインダー情報を紐付け。貼っておくだけでスマホが適切なタイミングでお知らせします。",
         "items": [
           {
-            "title": "アセット定義とプロンプトのシームレス連携",
-            "description": "セクションごとに必要な画像サイズや内容、Midjourney/DALL-E向けの最適プロンプトがJSONに事前定義されるため、画像生成AIとの連携もスムーズです。",
+            "tag": "Time Label",
+            "title": "日時のリマインダーをラベルに紐付け",
+            "catchphrase": "印刷したラベルが通知と連携",
+            "description": "備蓄品の賞味期限や定期的なフィルター交換など、「いつやるか」をラベルに設定。スマホの通知機能と連携して忘れを防止します。",
             "bullets": [
-              "画像生成AI用のプロンプト（ai_prompt）を自動生成",
-              "画像がなくてもダミーフォールバックで即座にプレビュー可能",
-              "差し替えは /public/images/ に配置するだけ"
+              "ラベル作成時にアラーム日時を簡単設定",
+              "指定の日時になるとスマホにプッシュ通知",
+              "iOSリマインダー / カレンダーともスムーズに連携"
             ],
-            "asset_id": "highlight_img_1",
-            "image_position": "right"
+            "asset_id": "timelabel_main_visual",
+            "image_position": "right",
+            "scenes": [
+              {
+                "tag": "防災備蓄",
+                "title": "非常食・備蓄水の賞味期限管理",
+                "description": "期限切れになりがちな防災グッズも、通知設定で適切なローリングストックが可能に。",
+                "asset_id": "scene_emergency"
+              },
+              {
+                "tag": "ゴミ回収",
+                "title": "隔週・月1回の収集日リマインド",
+                "description": "忘れやすい不燃ゴミや資源ゴミの回収日を前日・当日に通知。",
+                "asset_id": "scene_trash"
+              },
+              {
+                "tag": "書類・プリント",
+                "title": "学校の提出書類や契約期限",
+                "description": "保管書類の提出期日や更新月を忘れることなく確実に対処できます。",
+                "asset_id": "scene_document"
+              }
+            ]
           }
         ]
       },
       "required_assets": [
         {
-          "id": "highlight_img_1",
-          "path": "/images/feature_highlight/speed_boost.png",
+          "id": "timelabel_main_visual",
+          "file_name": "timelabel-feature.png",
+          "aspect_ratio": "4:3",
+          "prompt": "A modern pantry shelf with sleek labeled storage boxes and smartphone notification preview showing a friendly reminder"
+        },
+        {
+          "id": "scene_emergency",
+          "file_name": "scene-emergency.png",
           "aspect_ratio": "16:9",
-          "description": "高速なワークフローと高い生産性を象徴するグラフィック",
-          "ai_prompt": "High speed digital workflow illustration with sleek glassmorphic charts, warm ambient lighting --ar 16:9"
+          "prompt": "Neat emergency storage kit box with clean printed label and expiration date"
+        },
+        {
+          "id": "scene_trash",
+          "file_name": "scene-trash.png",
+          "aspect_ratio": "16:9",
+          "prompt": "Minimalist home recycling station with clear designated bin labels"
+        },
+        {
+          "id": "scene_document",
+          "file_name": "scene-document.png",
+          "aspect_ratio": "16:9",
+          "prompt": "Organized white file organizers on a desk with neatly aligned labels"
         }
       ]
     },
     {
-      "id": "icon_grid",
+      "id": "template-banner",
+      "type": "Banner",
+      "props": {
+        "badge": "豊富なテンプレート",
+        "title": "ライフスタイルに合わせて選べる多彩なデザイン",
+        "subtitle": "毎週・毎月新しいデザインを追加",
+        "description": "整理整頓、インテリア、ギフト、ショップ用途まで。プロのデザイナーが手がけた高品質なテンプレートを定期的に配信中。",
+        "cta": {
+          "label": "テンプレート一覧を見る",
+          "href": "#creation-methods"
+        },
+        "asset_id": "banner_template_img"
+      },
+      "required_assets": [
+        {
+          "id": "banner_template_img",
+          "file_name": "templates-collage.png",
+          "aspect_ratio": "16:9",
+          "prompt": "A stylish collage of various label design templates, including botanical illustrations, modern typography, and minimalist icons"
+        }
+      ]
+    },
+    {
+      "id": "other-features",
       "type": "IconGrid",
       "props": {
-        "badge": "3大メリット",
-        "title": "LP Builder Agent が選ばれる理由",
-        "description": "誰でもプロフェッショナル水準のWebサイトを素早くローンチできる仕組みを提供します。",
+        "badge": "その他の機能",
+        "title": "日々のラベル作りを快適にする多彩なサポート機能",
+        "highlight_word": "多彩なサポート機能",
+        "description": "細部まで使いやすさを追求した機能が、あなたのラベル作成をスムーズに支えます。",
         "columns": 3,
         "items": [
           {
-            "icon": "Zap",
-            "title": "数分でビルド完了",
-            "description": "概要プロンプトを投げるだけで、設計からコーディングまで一瞬で仕上がります。"
+            "icon": "Type",
+            "badge": "フォント",
+            "title": "豊富なフォントコレクション",
+            "description": "定番のゴシック・明朝から、手書き風・モダン欧文まで多彩な書体を搭載。",
+            "note": "※一部フォントは要オンライン接続"
+          },
+          {
+            "icon": "ImageIcon",
+            "badge": "イラスト",
+            "title": "オリジナル絵文字・アイコン",
+            "description": "暮らしや仕事のシーンにぴったりなピクトグラムを豊富に収録。",
+            "note": "※定期的に新作を追加"
+          },
+          {
+            "icon": "Bookmark",
+            "badge": "保存",
+            "title": "履歴・お気に入り登録",
+            "description": "過去に印刷したラベルやよく使うデザインをワンタップで呼び出し可能。",
+            "note": "※最大100件まで保存可能"
+          },
+          {
+            "icon": "Share2",
+            "badge": "共有",
+            "title": "デザイン共有機能",
+            "description": "作成したラベルデザインを家族や同僚と簡単にシェアできます。",
+            "note": "※要会員登録（無料）"
+          },
+          {
+            "icon": "Smartphone",
+            "badge": "連携",
+            "title": "Bluetooth® 自動接続",
+            "description": "プリンターの電源を入れるだけでスマホと素早くペアリングが完了。",
+            "note": "※Bluetooth 5.0対応"
           },
           {
             "icon": "Sparkles",
-            "title": "洗練されたデザイン品質",
-            "description": "アース・パステルトーン、大きめ角丸、美しい余白設計を徹底したモダンUI。"
-          },
-          {
-            "icon": "ShieldCheck",
-            "title": "高い保守性と拡張性",
-            "description": "TypeScript + Tailwind CSSで構築されており、コンポーネントの追加やカスタマイズも容易です。"
+            "badge": "更新",
+            "title": "定期的なデザイン追加",
+            "description": "季節のイベントやトレンドに合わせた新作テンプレートを自動でお届け。",
+            "note": "※アプリ内通知でお知らせ"
           }
         ]
       },
       "required_assets": []
     },
     {
-      "id": "banner",
-      "type": "Banner",
-      "props": {
-        "badge": "QUICK START",
-        "title": "あなたの新規プロジェクトのLPを、今すぐ構築してみませんか？",
-        "description": "テンプレート構成をそのまま利用して、最短3分でデモページを立ち上げられます。",
-        "cta": {
-          "label": "無料ではじめる",
-          "href": "#cta"
-        }
-      },
-      "required_assets": []
-    },
-    {
-      "id": "link_box",
+      "id": "lifestyle-articles",
       "type": "LinkBox",
       "props": {
-        "badge": "ドキュメント & ガイド",
-        "title": "スムーズな開発をサポートするナレッジ",
-        "description": "エージェントの動かし方やワークフローの使い方をいつでも確認できます。",
+        "badge": "暮らしの読みもの",
+        "title": "暮らしに役立つラベルコンテンツ",
+        "highlight_word": "ラベルコンテンツ",
+        "description": "整理収納アドバイザーによる活用術や、ラベルを使った素敵なインテリア実例を配信中。",
         "items": [
           {
-            "tag": "ワークフロー 01",
-            "title": "構成データ生成 (Spec Gen)",
-            "description": "サービス概要や参考サイトURLから page-structure.json を作成するフローです。",
-            "href": "#",
-            "icon": "FileText"
+            "tag": "収納術",
+            "title": "プロが教える！キッチンが劇的に片付くラベリングルール",
+            "description": "調味料や保存容器の統一感アップと、家族全員が迷わない収納テクニックをご紹介。",
+            "href": "https://www.kingjim.co.jp",
+            "button_label": "記事を読む",
+            "asset_id": "article_kitchen"
           },
           {
-            "tag": "ワークフロー 02",
-            "title": "LP自動構築 (Build LP)",
-            "description": "構成データを読み込み、Vite開発環境上で動的レンダリングを実行します。",
-            "href": "#",
-            "icon": "Layers"
+            "tag": "インテリア",
+            "title": "観葉植物とお部屋をおしゃれに彩るボタニカルラベル活用法",
+            "description": "シンプルな透明ラベルと植物の組み合わせで、カフェのような空間を演出するアイデア。",
+            "href": "https://www.kingjim.co.jp",
+            "button_label": "記事を読む",
+            "asset_id": "article_plants"
           },
           {
-            "tag": "ルール仕様",
-            "title": "Agent Guidelines",
-            "description": "デザインシステムやコンポーネントマッピング等の基本方針を記載しています。",
-            "href": "#",
-            "icon": "BookOpen"
+            "tag": "ギフト",
+            "title": "気持ちが伝わる！手作りギフトに添えるオリジナルタグの作り方",
+            "description": "リボンやクラフト紙に合わせる、特別感のあるメッセージラベルの作成アイデア集。",
+            "href": "https://www.kingjim.co.jp",
+            "button_label": "記事を読む",
+            "asset_id": "article_gift"
           }
         ]
       },
-      "required_assets": []
+      "required_assets": [
+        {
+          "id": "article_kitchen",
+          "file_name": "article-kitchen.png",
+          "aspect_ratio": "16:9",
+          "prompt": "A warm sunlight kitchen with labeled glass jars on wooden open shelves, interior lifestyle photography"
+        },
+        {
+          "id": "article_plants",
+          "file_name": "article-plants.png",
+          "aspect_ratio": "16:9",
+          "prompt": "Indoor house plants in ceramic pots with stylish plant name labels in a cozy living room"
+        },
+        {
+          "id": "article_gift",
+          "file_name": "article-gift.png",
+          "aspect_ratio": "16:9",
+          "prompt": "Gift wrapped in natural brown kraft paper with dried flowers and custom printed message label"
+        }
+      ]
     },
     {
       "id": "cta",
       "type": "CTA",
       "props": {
-        "badge": "READY TO LAUNCH",
-        "title": "アイデアを最速で形にし、世界に届けよう",
-        "description": "LP Builder Agentで、制作フローの常識を覆すスピード開発を今すぐ体験してください。",
-        "primary_cta": {
-          "label": "今すぐLPを自動生成する",
-          "href": "#hero"
-        },
-        "secondary_cta": {
-          "label": "ドキュメントを読む",
-          "href": "#"
-        },
+        "badge": "今すぐ無料ダウンロード",
+        "subtitle": "MARK 専用アプリ",
+        "title": "日々の暮らしを、あなたらしく彩る体験を",
+        "description": "「Hello」アプリはApp Store、Google Playから無料でダウンロードいただけます。手にしたその日から、新しいラベリング体験を。",
+        "app_store_url": "https://apps.apple.com",
+        "google_play_url": "https://play.google.com",
+        "note": "※iOS 14.0以降 / Android 9.0以降対応。※アプリ本体のダウンロードは無料です。",
         "guarantees": [
-          "セットアップ不要で即利用可能",
-          "完全オープンソース",
-          "MITライセンス対応"
-        ]
+          "アプリ本体のダウンロード無料",
+          "新作テンプレートを随時配信",
+          "安心の公式サポート体制"
+        ],
+        "app_icon_asset_id": "app_icon_asset"
       },
-      "required_assets": []
+      "required_assets": [
+        {
+          "id": "app_icon_asset",
+          "file_name": "app-icon.png",
+          "aspect_ratio": "1:1",
+          "prompt": "App icon graphic with clean typography saying Hello with golden accent on clean white background, 3D soft rounded squircle"
+        }
+      ]
     }
   ]
 }
