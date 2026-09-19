@@ -1,0 +1,224 @@
+{
+  "site_metadata": {
+    "title": "サービス名｜キャッチコピー",
+    "description": "サイトの概要文",
+    "theme": {
+      "primary_color": "#2B2B2B",
+      "background_color": "#F4F5F0",
+      "accent_color": "#E6A817"
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "Hero",
+      "props": {
+        "badge": "新規リリース記念キャンペーン中",
+        "title": "メインキャッチコピーをここに記載",
+        "highlight_word": "強調したいキーワード",
+        "description": "サービスの価値提案と概要説明文を2〜3行でわかりやすく記載します。",
+        "primary_cta": {
+          "label": "無料で試してみる",
+          "href": "#cta"
+        },
+        "secondary_cta": {
+          "label": "機能詳細を見る",
+          "href": "#features"
+        },
+        "stats": [
+          { "value": "99.8%", "label": "ユーザー満足度" },
+          { "value": "10x", "label": "業務効率化" },
+          { "value": "15,000+", "label": "導入企業数" }
+        ]
+      },
+      "required_assets": [
+        {
+          "id": "hero_visual",
+          "path": "/images/hero/hero_dashboard.png",
+          "aspect_ratio": "16:9",
+          "description": "SaaSダッシュボード画面が美しく浮かぶモダンな3D/UIグラフィック",
+          "ai_prompt": "Clean modern SaaS web application dashboard mock-up on a soft neutral light background, minimalist clay style, vibrant accents, high quality UI/UX illustration --ar 16:9"
+        }
+      ]
+    },
+    {
+      "id": "features_tab",
+      "type": "TabbedFeature",
+      "props": {
+        "badge": "主な機能",
+        "title": "目的や利用シーンに合わせた柔軟な機能群",
+        "description": "直感的な操作感と高度な自動化を両立した最新の機能を提供します。",
+        "tabs": [
+          {
+            "id": "tab1",
+            "label": "AI自動生成",
+            "title": "ワンクリックで構成からデザインまで自動生成",
+            "description": "テキストを入力するだけで、最適なレイアウトとコピーを瞬時に組み立てます。",
+            "points": [
+              "自然言語による直感的な指示",
+              "ターゲット層に合わせたトーン&マナー最適化",
+              "数秒でのドラフト生成と高速プレビュー"
+            ],
+            "asset_id": "tab_img_1"
+          },
+          {
+            "id": "tab2",
+            "label": "カスタマイズ",
+            "title": "ブロック単位で自由自在に調整可能",
+            "description": "ブランドガイドラインに沿ったカラーやフォントの微調整もスムーズに行えます。",
+            "points": [
+              "ドラッグ＆ドロップ感覚の直感操作",
+              "プリセットされた美しいタイポグラフィ",
+              "レスポンシブデザイン完全対応"
+            ],
+            "asset_id": "tab_img_2"
+          }
+        ]
+      },
+      "required_assets": [
+        {
+          "id": "tab_img_1",
+          "path": "/images/tabbed_feature/ai_generate.png",
+          "aspect_ratio": "4:3",
+          "description": "AIがコンテンツを自動生成している様子を表すスマートなUIモックアップ",
+          "ai_prompt": "Futuristic AI workflow generator interface with smooth animations, glowing elements, soft earth tones --ar 4:3"
+        },
+        {
+          "id": "tab_img_2",
+          "path": "/images/tabbed_feature/customize.png",
+          "aspect_ratio": "4:3",
+          "description": "直感的なブロック編集画面のモックアップ",
+          "ai_prompt": "Modern drag and drop visual editor web interface, minimalist components, sleek design --ar 4:3"
+        }
+      ]
+    },
+    {
+      "id": "feature_highlight",
+      "type": "FeatureHighlight",
+      "props": {
+        "badge": "注目機能",
+        "title": "ビジネスを加速させる圧倒的なスピード感",
+        "description": "従来の制作工程を90%削減し、コア業務に集中できる環境をつくります。",
+        "items": [
+          {
+            "title": "データ構造とUIの完全分離",
+            "description": "JSON形式の設定ファイルで管理するため、エンジニア・デザイナー・マーケター間での分業がスムーズです。",
+            "bullets": [
+              "スキーマ駆動による破綻のないレイアウト",
+              "バージョン管理との高い親和性"
+            ],
+            "asset_id": "highlight_img_1",
+            "image_position": "right"
+          }
+        ]
+      },
+      "required_assets": [
+        {
+          "id": "highlight_img_1",
+          "path": "/images/feature_highlight/speed_boost.png",
+          "aspect_ratio": "16:9",
+          "description": "高速なワークフローと高い生産性を象徴するグラフィック",
+          "ai_prompt": "High speed digital workflow illustration with sleek glassmorphic charts, warm ambient lighting --ar 16:9"
+        }
+      ]
+    },
+    {
+      "id": "icon_grid",
+      "type": "IconGrid",
+      "props": {
+        "badge": "選ばれる理由",
+        "title": "誰でもプロクオリティを実現できる充実の基盤",
+        "description": "導入初日から効果を実感していただける様々なメリットを備えています。",
+        "columns": 3,
+        "items": [
+          {
+            "icon": "Zap",
+            "title": "超高速デプロイ",
+            "description": "設定からビルドまで数分で完了。スピーディーな市場検証を可能にします。"
+          },
+          {
+            "icon": "Sparkles",
+            "title": "洗練されたデザイン",
+            "description": "プロのUI/UXデザイナーが設計した統一感のあるコンポーネント群を搭載。"
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "高可用性・保守性",
+            "description": "モダンなTypeScript & Tailwind CSS設計により安定した運用を実現します。"
+          }
+        ]
+      },
+      "required_assets": []
+    },
+    {
+      "id": "banner",
+      "type": "Banner",
+      "props": {
+        "badge": "期間限定",
+        "title": "今すぐ始めて、次世代のLP制作フローを体験しませんか？",
+        "description": "初期セットアップ無料・14日間のフリートライアルをご利用いただけます。",
+        "cta": {
+          "label": "無料トライアルを開始する",
+          "href": "#cta"
+        }
+      },
+      "required_assets": []
+    },
+    {
+      "id": "link_box",
+      "type": "LinkBox",
+      "props": {
+        "badge": "リソース",
+        "title": "導入をサポートする各種ドキュメント",
+        "description": "スムーズな導入と運用のためのガイド・ナレッジを用意しています。",
+        "items": [
+          {
+            "tag": "ドキュメント",
+            "title": "クイックスタートガイド",
+            "description": "初期セットアップから初回リリースまでの手順を詳しく解説しています。",
+            "href": "#docs",
+            "icon": "BookOpen"
+          },
+          {
+            "tag": "サンプル集",
+            "title": "LP構成テンプレート集",
+            "description": "BtoB SaaS、EC、採用向けなど多様なパターンの定義サンプルを閲覧できます。",
+            "href": "#templates",
+            "icon": "Layers"
+          },
+          {
+            "tag": "サポート",
+            "title": "コミュニティ & FAQ",
+            "description": "よくある質問や開発者コミュニティでのベストプラクティスを共有。",
+            "href": "#faq",
+            "icon": "HelpCircle"
+          }
+        ]
+      },
+      "required_assets": []
+    },
+    {
+      "id": "cta",
+      "type": "CTA",
+      "props": {
+        "badge": "今すぐスタート",
+        "title": "あなたのプロダクトの魅力を、最短で世界に届けよう",
+        "description": "クレジットカード登録不要。わずか数分であなただけのLPが完成します。",
+        "primary_cta": {
+          "label": "無料でLPを作成する",
+          "href": "#start"
+        },
+        "secondary_cta": {
+          "label": "デモを試す",
+          "href": "#demo"
+        },
+        "guarantees": [
+          "14日間無料トライアル",
+          "いつでもキャンセル可能",
+          "専門スタッフによるチャットサポート"
+        ]
+      },
+      "required_assets": []
+    }
+  ]
+}

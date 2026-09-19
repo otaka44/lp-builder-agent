@@ -1,0 +1,225 @@
+{
+  "site_metadata": {
+    "title": "LP Builder Agent｜数分で高品質なLPを自動生成",
+    "description": "サービス概要を入力するだけで、AIが最適な構成設計・コピーライティング・アセット定義を行って高クオリティなLPを瞬時に構築する次世代開発エージェント。",
+    "theme": {
+      "primary_color": "#2B2B2B",
+      "background_color": "#F4F5F0",
+      "accent_color": "#E6A817"
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "Hero",
+      "props": {
+        "badge": "AI-Powered Landing Page Generator v1.0",
+        "title": "アイデアを最速で具現化する、次世代のLP生成エージェント",
+        "highlight_word": "次世代のLP生成エージェント",
+        "description": "サービス概要をプロンプトに入力するだけ。AIが最適なコンポーネント選定・デザインデータ注入・アセット定義を行い、数分で高品質なランディングページを構築します。",
+        "primary_cta": {
+          "label": "今すぐ使ってみる",
+          "href": "#cta"
+        },
+        "secondary_cta": {
+          "label": "機能デモを見る",
+          "href": "#features"
+        },
+        "stats": [
+          { "value": "10x", "label": "制作スピードの向上" },
+          { "value": "100%", "label": "TypeScript & Tailwind準拠" },
+          { "value": "7+", "label": "厳選UIコンポーネント" }
+        ]
+      },
+      "required_assets": [
+        {
+          "id": "hero_visual",
+          "path": "/images/hero/hero_dashboard.png",
+          "aspect_ratio": "16:9",
+          "description": "美しく洗練されたAI開発ダッシュボード画面の3D UIモックアップ",
+          "ai_prompt": "Clean modern SaaS web application dashboard mock-up on a soft neutral light background, minimalist clay style, vibrant amber accents, high quality UI/UX illustration --ar 16:9"
+        }
+      ]
+    },
+    {
+      "id": "features_tab",
+      "type": "TabbedFeature",
+      "props": {
+        "badge": "機能紹介",
+        "title": "構成データとUIが完全に連動するスマート設計",
+        "description": "スキーマ駆動開発により、エンジニアリングとデザインの境界をシームレスにつなぎます。",
+        "tabs": [
+          {
+            "id": "tab1",
+            "label": "構成データ自動生成",
+            "title": "概要テキストから即座にJSONスペックを作成",
+            "description": "ワークフロー 01 を実行するだけで、ターゲット顧客や訴求軸を分析し、最適なセクション構成を自動設計します。",
+            "points": [
+              "自然言語による直感的な要件定義",
+              "ペルソナに応じた最適なコンポーネント選定",
+              "画像生成用英語プロンプトの自動出力"
+            ],
+            "asset_id": "tab_img_1"
+          },
+          {
+            "id": "tab2",
+            "label": "動的レンダリング",
+            "title": "JSONデータから一瞬でReactコンポーネントを描画",
+            "description": "洗練された7つの基本コンポーネントが、設定されたデータに基づいて破綻なく美しくスタイリングされます。",
+            "points": [
+              "Tailwind CSSによる統一感のあるモダンデザイン",
+              "画像が未配置でも美しいプレースホルダー表示",
+              "完全レスポンシブ（PC・タブレット・スマホ対応）"
+            ],
+            "asset_id": "tab_img_2"
+          }
+        ]
+      },
+      "required_assets": [
+        {
+          "id": "tab_img_1",
+          "path": "/images/tabbed_feature/ai_generate.png",
+          "aspect_ratio": "4:3",
+          "description": "AIが自然言語からJSON構造データを生成するフローの可視化グラフィック",
+          "ai_prompt": "Futuristic AI workflow generator interface with smooth animations, glowing elements, soft earth tones --ar 4:3"
+        },
+        {
+          "id": "tab_img_2",
+          "path": "/images/tabbed_feature/customize.png",
+          "aspect_ratio": "4:3",
+          "description": "モダンなReactコンポーネントが自動配置されるUIプレビュー画面",
+          "ai_prompt": "Modern drag and drop visual editor web interface, minimalist components, sleek design --ar 4:3"
+        }
+      ]
+    },
+    {
+      "id": "feature_highlight",
+      "type": "FeatureHighlight",
+      "props": {
+        "badge": "圧倒的な生産性",
+        "title": "ゼロから作らない。だから最高速で最高品質。",
+        "description": "従来のLP制作にかかっていた時間とコストを90%以上削減し、ビジネスの検証速度を飛躍的に高めます。",
+        "items": [
+          {
+            "title": "アセット定義とプロンプトのシームレス連携",
+            "description": "セクションごとに必要な画像サイズや内容、Midjourney/DALL-E向けの最適プロンプトがJSONに事前定義されるため、画像生成AIとの連携もスムーズです。",
+            "bullets": [
+              "画像生成AI用のプロンプト（ai_prompt）を自動生成",
+              "画像がなくてもダミーフォールバックで即座にプレビュー可能",
+              "差し替えは /public/images/ に配置するだけ"
+            ],
+            "asset_id": "highlight_img_1",
+            "image_position": "right"
+          }
+        ]
+      },
+      "required_assets": [
+        {
+          "id": "highlight_img_1",
+          "path": "/images/feature_highlight/speed_boost.png",
+          "aspect_ratio": "16:9",
+          "description": "高速なワークフローと高い生産性を象徴するグラフィック",
+          "ai_prompt": "High speed digital workflow illustration with sleek glassmorphic charts, warm ambient lighting --ar 16:9"
+        }
+      ]
+    },
+    {
+      "id": "icon_grid",
+      "type": "IconGrid",
+      "props": {
+        "badge": "3大メリット",
+        "title": "LP Builder Agent が選ばれる理由",
+        "description": "誰でもプロフェッショナル水準のWebサイトを素早くローンチできる仕組みを提供します。",
+        "columns": 3,
+        "items": [
+          {
+            "icon": "Zap",
+            "title": "数分でビルド完了",
+            "description": "概要プロンプトを投げるだけで、設計からコーディングまで一瞬で仕上がります。"
+          },
+          {
+            "icon": "Sparkles",
+            "title": "洗練されたデザイン品質",
+            "description": "アース・パステルトーン、大きめ角丸、美しい余白設計を徹底したモダンUI。"
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "高い保守性と拡張性",
+            "description": "TypeScript + Tailwind CSSで構築されており、コンポーネントの追加やカスタマイズも容易です。"
+          }
+        ]
+      },
+      "required_assets": []
+    },
+    {
+      "id": "banner",
+      "type": "Banner",
+      "props": {
+        "badge": "QUICK START",
+        "title": "あなたの新規プロジェクトのLPを、今すぐ構築してみませんか？",
+        "description": "テンプレート構成をそのまま利用して、最短3分でデモページを立ち上げられます。",
+        "cta": {
+          "label": "無料ではじめる",
+          "href": "#cta"
+        }
+      },
+      "required_assets": []
+    },
+    {
+      "id": "link_box",
+      "type": "LinkBox",
+      "props": {
+        "badge": "ドキュメント & ガイド",
+        "title": "スムーズな開発をサポートするナレッジ",
+        "description": "エージェントの動かし方やワークフローの使い方をいつでも確認できます。",
+        "items": [
+          {
+            "tag": "ワークフロー 01",
+            "title": "構成データ生成 (Spec Gen)",
+            "description": "サービス概要や参考サイトURLから page-structure.json を作成するフローです。",
+            "href": "#",
+            "icon": "FileText"
+          },
+          {
+            "tag": "ワークフロー 02",
+            "title": "LP自動構築 (Build LP)",
+            "description": "構成データを読み込み、Vite開発環境上で動的レンダリングを実行します。",
+            "href": "#",
+            "icon": "Layers"
+          },
+          {
+            "tag": "ルール仕様",
+            "title": "Agent Guidelines",
+            "description": "デザインシステムやコンポーネントマッピング等の基本方針を記載しています。",
+            "href": "#",
+            "icon": "BookOpen"
+          }
+        ]
+      },
+      "required_assets": []
+    },
+    {
+      "id": "cta",
+      "type": "CTA",
+      "props": {
+        "badge": "READY TO LAUNCH",
+        "title": "アイデアを最速で形にし、世界に届けよう",
+        "description": "LP Builder Agentで、制作フローの常識を覆すスピード開発を今すぐ体験してください。",
+        "primary_cta": {
+          "label": "今すぐLPを自動生成する",
+          "href": "#hero"
+        },
+        "secondary_cta": {
+          "label": "ドキュメントを読む",
+          "href": "#"
+        },
+        "guarantees": [
+          "セットアップ不要で即利用可能",
+          "完全オープンソース",
+          "MITライセンス対応"
+        ]
+      },
+      "required_assets": []
+    }
+  ]
+}
