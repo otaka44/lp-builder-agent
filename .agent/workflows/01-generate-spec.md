@@ -16,6 +16,12 @@
    - 単なる「見出し＋ボタン＋モックアップ」の固定型ではなく、そのプロダクトの世界観を最も端的に体感できる表現（ライブデモ、感情マップ、ダイナミックUI等）を主役に選定する。
 4. **コンポーネント構成の選定**:
    - 7種類の基本コンポーネント（Hero, TabbedFeature, FeatureHighlight, IconGrid, Banner, LinkBox, CTA）からストーリー性の高い並び順を選択する。
+5. **必須ページ・多言語（i18n）データの策定**:
+   - 以下の3ページの内容を必ず定義する：
+     - **`privacy`**: 'Privacy Policy' / 'プライバシーポリシー'
+     - **`terms`**: 'Terms of Service' / '利用規約'
+     - **`support`**: 'Support & FAQ' / 'サポート・FAQ'
+   - 少なくとも**日本語（`ja`）および英語（`en`）**の多言語データを生成し、言語切り替えに対応できるようにする。
 
 ### Pass 2: 自己批評（Self-Critique）とAIテンプレ臭の排除
 以下の「AI Slopチェックリスト」で内容を検証・修正する：
@@ -24,10 +30,12 @@
 - [ ] 時系列やステップでない並列項目に無意味な「01/02/03」ナンバリングをつけていないか？
 - [ ] コピーが抽象的な美辞麗句ではなく、ユーザー視点で具体的で行動を促す言葉になっているか？
 - [ ] 大胆さを発揮するポイントが1箇所に絞られ、全体の情報設計が整然としているか？
+- [ ] Privacy Policy、Terms of Service、Support & FAQ の3ページが日・英両対応で漏れなく定義されているか？
 
 ### 出力（Structure Output）
 1. `.agent/templates/structure.json` のスキーマ形式に準拠する。
 2. `site_metadata.theme` に Pass 1 で決定したカラーパレットを埋め込む。
-3. 各セクションの `props` および画像生成用の `required_assets`（プロンプト含む）を記述する。
-4. 出力結果を `src/constants/page-structure.json` に上書き保存する。
+3. `legal_pages`（または `pages`）に `privacy`, `terms`, `support` の日英コンテンツを定義する。
+4. 各セクションの `props` および画像生成用の `required_assets`（プロンプト含む）を記述する。
+5. 出力結果を `src/constants/page-structure.json` に上書き保存する。
 

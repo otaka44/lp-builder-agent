@@ -8,6 +8,132 @@
       "text_color": "#2B2B2B"
     }
   },
+  "i18n": {
+    "default_locale": "ja",
+    "supported_locales": ["ja", "en"]
+  },
+  "legal_pages": {
+    "privacy": {
+      "id": "privacy",
+      "title": {
+        "ja": "プライバシーポリシー",
+        "en": "Privacy Policy"
+      },
+      "last_updated": "2026-10-01",
+      "sections": [
+        {
+          "heading": {
+            "ja": "1. 取得する情報および利用目的",
+            "en": "1. Information We Collect and Purpose"
+          },
+          "body": {
+            "ja": "当社は、本サービスの提供・品質向上・サポート対応のために、お客様の端末情報、利用ログ、お問い合わせ内容を取得することがあります。取得した情報は目的外に利用いたしません。",
+            "en": "We may collect device information, usage logs, and inquiry details to provide, improve, and support the service. Collected information will not be used for purposes other than intended."
+          }
+        },
+        {
+          "heading": {
+            "ja": "2. 情報の保護と第三者提供",
+            "en": "2. Data Protection & Third-Party Disclosure"
+          },
+          "body": {
+            "ja": "法令に基づく場合を除き、お客様の同意なく第三者に個人情報を提供することはありません。適切なセキュリティ対策を講じ、不正アクセスや漏洩を防止します。",
+            "en": "Except as required by law, we do not provide personal information to third parties without your consent. We implement reasonable security measures to prevent unauthorized access or leakage."
+          }
+        },
+        {
+          "heading": {
+            "ja": "3. お問い合わせ窓口",
+            "en": "3. Contact Us"
+          },
+          "body": {
+            "ja": "プライバシーに関するお問い合わせは、サポート窓口までご連絡ください。",
+            "en": "If you have any questions regarding our Privacy Policy, please contact our support desk."
+          }
+        }
+      ]
+    },
+    "terms": {
+      "id": "terms",
+      "title": {
+        "ja": "利用規約",
+        "en": "Terms of Service"
+      },
+      "last_updated": "2026-10-01",
+      "sections": [
+        {
+          "heading": {
+            "ja": "1. 利用条件の適用",
+            "en": "1. Acceptance of Terms"
+          },
+          "body": {
+            "ja": "本規約は、本アプリおよび関連サービスをご利用いただくすべてのユーザーに適用されます。ご利用にあたっては本規約に同意いただく必要があります。",
+            "en": "These Terms apply to all users of this application and related services. By accessing or using the service, you agree to be bound by these Terms."
+          }
+        },
+        {
+          "heading": {
+            "ja": "2. 知的財産権および禁止行為",
+            "en": "2. Intellectual Property & Prohibited Actions"
+          },
+          "body": {
+            "ja": "本アプリ内のコンテンツ・デザイン・商標の権利は当社に帰属します。リバースエンジニアリング、不正利用、第三者への再配布を禁じます。",
+            "en": "All content, designs, and trademarks belong to us or our licensors. Reverse engineering, unauthorized use, or unauthorized redistribution is strictly prohibited."
+          }
+        },
+        {
+          "heading": {
+            "ja": "3. 免責事項",
+            "en": "3. Disclaimer of Warranties"
+          },
+          "body": {
+            "ja": "本サービスは現状有姿で提供され、動作の完全性や特定目的への適合性を保証するものではありません。",
+            "en": "The service is provided on an 'as-is' and 'as-available' basis without warranties of any kind regarding accuracy or fitness for a particular purpose."
+          }
+        }
+      ]
+    },
+    "support": {
+      "id": "support",
+      "title": {
+        "ja": "サポート・FAQ",
+        "en": "Support & FAQ"
+      },
+      "email": "support@example.com",
+      "faq": [
+        {
+          "question": {
+            "ja": "アプリの利用に料金はかかりますか？",
+            "en": "Is the app free to use?"
+          },
+          "answer": {
+            "ja": "アプリの基本機能は無料でご利用いただけます。通信料はお客様のご負担となります。",
+            "en": "The basic features of the app are free to use. Standard data communication charges may apply."
+          }
+        },
+        {
+          "question": {
+            "ja": "対応機種やOSバージョンを教えてください。",
+            "en": "What are the supported devices and OS versions?"
+          },
+          "answer": {
+            "ja": "iOS 14.0以降、Android 9.0以降のスマートフォンに対応しています。",
+            "en": "Supported on smartphones running iOS 14.0 or later, and Android 9.0 or later."
+          }
+        },
+        {
+          "question": {
+            "ja": "操作方法で困ったときの問い合わせ先はありますか？",
+            "en": "How can I contact customer support?"
+          },
+          "answer": {
+            "ja": "support@example.com またはお問い合わせフォームより24時間受け付けております。",
+            "en": "You can reach us at support@example.com or via our online inquiry form 24/7."
+          }
+        }
+      ]
+    }
+  },
   "sections": [
     {
       "id": "hero",
